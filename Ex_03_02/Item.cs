@@ -11,6 +11,7 @@ public class Item
 
     public void Print(int itemNo,string itemName,int price)
     {
+        Console.WriteLine("結果");
         Console.WriteLine($"商品番号 = {itemNo}");
         Console.WriteLine($"商品名 = {itemName}");
         Console.WriteLine($"単価 = {price}");

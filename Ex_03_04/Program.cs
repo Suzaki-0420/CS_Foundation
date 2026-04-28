@@ -1,4 +1,4 @@
-﻿namespace Ex_03_02;
+﻿namespace Ex_03_04;
 
 static class Program
 {
@@ -14,6 +14,7 @@ static class Program
         Console.Write("単価を入力してください->");
         item.price=int.Parse(System.Console.ReadLine());
 
-        item.Print(item.itemNo,item.itemName,item.price);
+        int taxincluded=item.CalculateTaxAmount(item.salesTaxRate,item.price);
+        Console.WriteLine($"税込み金額 = {taxincluded}");
     }
 }
