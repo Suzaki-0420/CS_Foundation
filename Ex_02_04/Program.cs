@@ -13,8 +13,8 @@ static class Program
         arrayA[2]=int.Parse(System.Console.ReadLine());
 
         Console.WriteLine("入力結果");
-        Console.WriteLine($"数値1：{arrayA[0]}です");
-        Console.WriteLine($"数値2：{arrayA[1]}です");
-        Console.WriteLine($"数値3：{arrayA[2]}です");
+        Console.WriteLine($"数値1：{arrayA[0]}");
+        Console.WriteLine($"数値2：{arrayA[1]}");
+        Console.WriteLine($"数値3：{arrayA[2]}");
     }
 }
