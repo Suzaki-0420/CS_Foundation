@@ -5,9 +5,8 @@ static class Program
 {
     static void Main(string[] args)
     {
-        Warrior character = new();
-        character.Name = "戦士";
-        character.Hp = 10;//setアクセッサがprivateなので設定不可
-        character.Ap = 10;//読み取り専用プロパティなので設定不可
+        Warrior warrior = new Warrior();
+        warrior.Greet();//Humanクラスのメソッドの呼び出し
+        warrior.Attack();//Warriorクラスのメソッドの呼び出し
     }
 }

@@ -8,7 +8,7 @@ static class Program
         Item item = new();
         //デフォルトコンストラクタが消えたのでここでnewをするとエラーになる
         Console.Write("商品番号を入力してください->");
-        item.itemNo=int.Parse(System.Console.ReadLine());
+        item.itemNo=System.Console.ReadLine();
 
         Console.Write("商品名を入力してください->");
         item.itemName=System.Console.ReadLine();
