@@ -1,4 +1,4 @@
-namespace Ex_03_05;
+namespace Ex_03_06;
 
 /// <summary>
 /// 商品情報を表すクラス
@@ -21,11 +21,17 @@ public class Item
     /// コンストラクタ
     /// </summary>
     
-    public Item(int pitemNo,string pitemName,int pprice)
+    public Item()
+    {}
+
+    public void ChangePrice(int price)
     {
-        itemNo = pitemNo;
-        itemName = pitemName;
-        price = pprice;
+        this.price=price;
+    }
+    public void ChangePrice(string price)
+    {
+        int intprice=int.Parse(price);
+        this.price=intprice;
     }
 
 }
