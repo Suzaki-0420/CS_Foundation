@@ -5,8 +5,10 @@ static class Program
 {
     static void Main(string[] args)
     {
-        Warrior warrior = new Warrior();
-        warrior.Greet();//Humanクラスのメソッドの呼び出し
-        warrior.Attack();//Warriorクラスのメソッドの呼び出し
+        Human human = new();
+        string s = human.ToString();
+        Console.WriteLine(s);
+        object o = human;
+        Console.WriteLine(o.Equals(human));
     }
 }

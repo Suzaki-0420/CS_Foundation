@@ -1,16 +1,20 @@
 namespace Example;
 
 /// <summary>
-/// 戦士を表すクラス
+/// 人物を表すクラス
 /// </summary>
-public class Warrior : Human
+public class Human
 {
-    public int Ap { get; set; } = 5;
-    public int Dp { get; set; }
+    public string Name { get; set; }
+    public int Hp { get; private set; }
 
-    public void Attack()
+    public void Greet()
     {
-        Console.WriteLine("戦士は攻撃した！");
-        Console.WriteLine($"{Ap}のダメージを与えた。");
+        Console.WriteLine("Hi!");
+    }
+
+    public void Defence(int damage)
+    {
+        Hp -= damage;
     }
 }
