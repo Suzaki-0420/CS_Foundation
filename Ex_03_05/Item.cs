@@ -16,4 +16,16 @@ public class Item
         Console.WriteLine($"商品名 = {itemName}");
         Console.WriteLine($"単価 = {price}");
     }
+
+    ///<summary>
+    /// コンストラクタ
+    /// <summary>
+    
+    public Item(int pitemNo,string pitemName,int pprice)
+    {
+        itemNo = pitemNo;
+        itemName = pitemName;
+        price = pprice;
+    }
+
 }
