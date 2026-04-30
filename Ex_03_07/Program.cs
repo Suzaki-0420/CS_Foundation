@@ -1,4 +1,5 @@
 ﻿namespace Ex_03_07;
+using Ex_03_07.Modules;
 
 static class Program
 {
