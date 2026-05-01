@@ -5,11 +5,27 @@ static class Program
 {
     static void Main(string[] args)
     {
-        Warrior warrior1 = new("ユータ");
-        Warrior warrior2 = new("ユーサク");
-        Warrior warrior3 = new("ユースケ");
-        warrior2.Greet();
-        Console.WriteLine($"{Warrior.cnt}");
-        Warrior.ShowHeroNum();
+        try
+        {
+            int[] vals=null;
+            ArrayCalc arrayCalc = new ArrayCalc();
+            var sum = arrayCalc.Summarize(vals);
+            Console.WriteLine($"合計={0}", sum);
+        }
+        catch (IndexOutOfRangeException e)
+        {
+            Console.WriteLine(e.Message);
+            Console.WriteLine("配列の誤ったアクセスによる例外");
+        }
+        catch (NullReferenceException e)
+        {
+            Console.WriteLine(e.Message);
+            Console.WriteLine("値がNullの変数利用による例外");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            Console.WriteLine("その他の例外");
+        }
     }
 }
