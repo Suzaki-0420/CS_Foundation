@@ -17,9 +17,9 @@ static class Program
             int div=calculator.Div(x,y);
             Console.WriteLine($"値1 / 値2 = {div}");
         }
-        catch
+        catch(Exception ex)
         {
-            Console.WriteLine("例外:Attempted to divide by zero.");
+            Console.WriteLine($"例外:{ex.Message}");
         }
         
     }

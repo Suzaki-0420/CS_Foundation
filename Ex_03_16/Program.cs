@@ -5,6 +5,7 @@ static class Program
     static void Main(string[] args)
     {
         var calculator = new Calculator();
+        //var input = new InputParameterLessThanZeroException();
 
         Console.WriteLine("値1を入力してください->");
         int x=int.Parse(System.Console.ReadLine());
@@ -21,5 +22,10 @@ static class Program
         {
             Console.WriteLine("例外:Attempted to divide by zero.");
         }
+        finally
+        {
+            Console.WriteLine("必ず実行");
+        }
+        Console.WriteLine("プログラム正常終了");
     }
 }
