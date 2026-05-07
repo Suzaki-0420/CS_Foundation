@@ -5,27 +5,12 @@ static class Program
 {
     static void Main(string[] args)
     {
-        try
-        {
-            int[] vals=null;
-            ArrayCalc arrayCalc = new ArrayCalc();
-            var sum = arrayCalc.Summarize(vals);
-            Console.WriteLine($"合計={0}", sum);
-        }
-        catch (IndexOutOfRangeException e)
-        {
-            Console.WriteLine(e.Message);
-            Console.WriteLine("配列の誤ったアクセスによる例外");
-        }
-        catch (NullReferenceException e)
-        {
-            Console.WriteLine(e.Message);
-            Console.WriteLine("値がNullの変数利用による例外");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-            Console.WriteLine("その他の例外");
-        }
+        Random random = new Random();
+        Console.WriteLine($"random.Next(1, 6):{random.Next(1, 6)}");
+        Console.WriteLine($"random.NextSingle():{random.NextSingle()}");
+        int[] vs = { 8, 3, 5, 7, 2 };
+        random.Shuffle(vs);
+        Console.WriteLine("random.Shuffle({ 8, 3, 5, 7, 2 });");
+        foreach ( int v in vs) {  Console.Write(v); }
     }
 }

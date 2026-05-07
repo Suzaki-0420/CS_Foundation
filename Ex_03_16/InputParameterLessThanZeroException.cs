@@ -9,7 +9,7 @@ namespace Ex_03_16
     {
         public InputParameterLessThanZeroException(int param):base($"xに{param}が入力されました。正の値を入力してください。")
         {
-                
+               
         }
 
     }

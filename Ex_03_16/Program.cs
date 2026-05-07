@@ -4,23 +4,22 @@ static class Program
 {
     static void Main(string[] args)
     {
-        var calculator = new Calculator();
-        //var input = new InputParameterLessThanZeroException();
+        try {
+            Console.Write("値1を入力してください->");
+            int val1 = int.Parse(Console.ReadLine());
+            Console.Write("値2を入力してください->");
+            int val2 = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("値1を入力してください->");
-        int x=int.Parse(System.Console.ReadLine());
-
-        Console.WriteLine("値2を入力してください->");
-        int y=int.Parse(System.Console.ReadLine());
-
-        try
-        {
-            int div=calculator.Div(x,y);
-            Console.WriteLine($"値1 / 値2 = {div}");
+            var calc = new Calculator();
+            Console.WriteLine($"値1 / 値2 = {calc.Div(val1, val2)}");
         }
-        catch
+        catch(InputParameterLessThanZeroException e)
         {
-            Console.WriteLine("例外:Attempted to divide by zero.");
+            Console.WriteLine(e.Message);
+        }
+        catch(DivideByZeroException e)
+        {
+            Console.WriteLine(e.Message);
         }
         finally
         {
