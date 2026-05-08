@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Ex_04_01_Lib
+{
+    public class Item
+    {
+
+        public int ItemNo { get; set; }
+        // 商品名
+        public string? ItemName { get; set; }
+        // 単価
+        public int Price { get; set; }
+
+    }
+}
